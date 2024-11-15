@@ -9,9 +9,9 @@ const HomePage = () => {
       {/* Sidebar */}
       <div className="flex flex-col items-center justify-center w-[350px] h-full bg-black border-r border-gray-700 p-8">
         {/* Profile Image */}
-        <div className="w-[250px] h-[250px] rounded-full overflow-hidden mb-6 flex items-center justify-center border-4 border-gray-700">
+        <div className="w-[300px] h-[300px] rounded-full overflow-hidden mb-6 flex items-center justify-center border-4 border-gray-700">
           <img
-            src="src/assets/portfolio.jpg"
+            src="public\portfolio.jpg" // Changed to relative path from the public folder
             alt="Profile"
             className="w-full h-full object-cover"
           />

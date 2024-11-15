@@ -1,10 +1,11 @@
 import React from "react";
 import Slider from "react-slick"; // Import react-slick
 
+// Update image paths to be relative to the public folder
 const profileLinks = {
-  Leetcode: "src/assets/LCprofile.png",
-  CodeChef: "src/assets/codechefProfile.png",
-  CodeForces: "src/assets/codeforcesProfile.png",
+  Leetcode: "public/LCprofile.png", // Moved to public/assets
+  CodeChef: "public/codechefProfile.png", // Moved to public/assets
+  CodeForces: "public/codeforcesProfile.png", // Moved to public/assets
 };
 
 const Profiles = () => {

@@ -3,19 +3,19 @@ import React from "react";
 const projectData = [
   {
     name: "BizNiche",
-    image: "src/assets/BizNicheSS.png",
+    image: "public/BizNicheSS.png", // Image moved to the public folder
     description:
       "An e-commerce platform empowering local businesses with AI-powered product recommendations and category detection.",
   },
   {
     name: "Course Session Plan",
-    image: "src/assets/SessionPlanManagement.png",
+    image: "public/SessionPlanManagement.png", // Image moved to the public folder
     description:
       "A tool for instructors to create, manage, and share detailed course session plans effectively.",
   },
   {
     name: "Career GPT",
-    image: "src/assets/GeminiProject.png",
+    image: "public/GeminiProject.png", // Image moved to the public folder
     description:
       "An AI-driven platform offering personalized career guidance based on user profiles and preferences.",
   },
@@ -36,9 +36,9 @@ const Projects = () => {
             {/* Project Image */}
             <div className="w-full lg:w-2/5 flex items-center justify-center mb-6 lg:mb-0 bg-transparent">
               <img
-                src={project.image}
+                src={project.image} // Relative path to the public folder
                 alt={project.name}
-                className="w-[550px] h-[350px] object-contain rounded-lg bg-transparent"
+                className="w-full h-[350px] object-cover rounded-lg bg-transparent"
               />
             </div>
             {/* Project Details */}
