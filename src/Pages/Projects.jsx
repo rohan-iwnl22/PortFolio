@@ -1,108 +1,56 @@
-import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import ExampleCarouselImage from "../Components/ExampleCarouselImage";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
-import Offcanvas from "react-bootstrap/Offcanvas";
+import React from "react";
+
+const projectData = [
+  {
+    name: "BizNiche",
+    image: "src/assets/BizNicheSS.png",
+    description:
+      "An e-commerce platform empowering local businesses with AI-powered product recommendations and category detection.",
+  },
+  {
+    name: "Course Session Plan",
+    image: "src/assets/SessionPlanManagement.png",
+    description:
+      "A tool for instructors to create, manage, and share detailed course session plans effectively.",
+  },
+  {
+    name: "Career GPT",
+    image: "src/assets/GeminiProject.png",
+    description:
+      "An AI-driven platform offering personalized career guidance based on user profiles and preferences.",
+  },
+];
 
 const Projects = () => {
-  const [show, setShow] = useState([false, false, false]); // State for each Offcanvas
-  const [offcanvasTexts, setOffcanvasTexts] = useState([
-    "", // Text for first carousel item
-    "", // Text for second carousel item
-    "", // Text for third carousel item
-  ]);
-
-  const handleClose = (index) => () => {
-    setShow((prevState) => {
-      const newState = [...prevState];
-      newState[index] = false;
-      return newState;
-    });
-  };
-
-  const handleShow = (index, text) => () => {
-    setShow((prevState) => {
-      const newState = [...prevState];
-      newState[index] = true;
-      return newState;
-    });
-    setOffcanvasTexts((prevState) => {
-      const newTexts = [...prevState];
-      newTexts[index] = text;
-      return newTexts;
-    });
-  };
-
   return (
-    <div className="flex justify-center items-center text-white">
-      <Carousel>
-        <Carousel.Item>
-          <ExampleCarouselImage
-            text="First slide"
-            path="src/assets/vagabond 1.jpg"
-          />
-          <Carousel.Caption>
-            <Button
-              variant="primary"
-              onClick={handleShow(0, "First Offcanvas Text")}
-            >
-              Launch
-            </Button>
-            <Offcanvas show={show[0]} onHide={handleClose(0)}>
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>{offcanvasTexts[0]}</Offcanvas.Body>
-            </Offcanvas>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <ExampleCarouselImage
-            text="Second slide"
-            path="src/assets/GeminiProject.png"
-          />
-          <Carousel.Caption>
-            <Button
-              variant="primary"
-              onClick={handleShow(
-                1,
-                `Using Gemini-API this model generated roadmaps for domain required by students and provides them links for necessary courses. The search is strictly restricted to courses`
-              )}
-            >
-              Launch
-            </Button>
-            <Offcanvas show={show[1]} onHide={handleClose(1)}>
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title>
-                  CareerGPT- A RoadMap Generator for students
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>{offcanvasTexts[1]}</Offcanvas.Body>
-            </Offcanvas>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <ExampleCarouselImage
-            text="Third slide"
-            path="src/assets/stretched-1920-1080-679478.jpg"
-          />
-          <Carousel.Caption>
-            <Button
-              variant="primary"
-              onClick={handleShow(2, "Third Offcanvas Text")}
-            >
-              Launch
-            </Button>
-            <Offcanvas show={show[2]} onHide={handleClose(2)}>
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>{offcanvasTexts[2]}</Offcanvas.Body>
-            </Offcanvas>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+    <div className="text-white mt-12 px-10">
+      <h1 className="text-5xl font-extrabold mb-12 text-center bg-transparent">
+        Projects
+      </h1>
+      <div className="space-y-12 bg-transparent">
+        {projectData.map((project, index) => (
+          <div
+            key={index}
+            className="flex flex-col lg:flex-row items-center rounded-xl shadow-lg p-10 bg-transparent hover:shadow-2xl transition duration-300"
+          >
+            {/* Project Image */}
+            <div className="w-full lg:w-2/5 flex items-center justify-center mb-6 lg:mb-0 bg-transparent">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-[550px] h-[350px] object-contain rounded-lg bg-transparent"
+              />
+            </div>
+            {/* Project Details */}
+            <div className="w-full lg:w-3/5 text-center lg:text-left space-y-6 pl-10 bg-transparent">
+              <h2 className="text-4xl font-bold bg-transparent">
+                {project.name}
+              </h2>
+              <p className="text-2xl bg-transparent">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

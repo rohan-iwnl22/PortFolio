@@ -1,21 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TechStack from "./Pages/TechStack";
-import Projects from "./Pages/Projects";
-import Nav from "./Components/Nav";
-import "./App.css";
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import HomePage from "./Pages/HomePage";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <>
-      <Nav />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/techstack" element={<TechStack />}></Route>
-          <Route path="/projects" element={<Projects />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <HomePage></HomePage>
     </>
   );
 }
