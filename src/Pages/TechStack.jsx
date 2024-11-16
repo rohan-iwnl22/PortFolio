@@ -28,7 +28,7 @@ const TechStack = () => {
   return (
     <div className="text-white space-y-6">
       <h1 className="text-3xl font-bold mb-4">Tech Stack</h1>
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <div
             key={index}
