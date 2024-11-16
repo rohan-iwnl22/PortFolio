@@ -13,7 +13,7 @@ const HomePage = () => {
           {/* Profile Image */}
           <div className="w-[150px] sm:w-[200px] h-[150px] sm:h-[200px] rounded-full overflow-hidden mb-6 flex items-center justify-center border-4 border-gray-700">
             <img
-              src="https://i.postimg.cc/nzVHpN8R/portfolio.jpg"
+              src="https://i.ibb.co/0jGFJ8B/portfolio.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
             />

@@ -3,19 +3,19 @@ import React from "react";
 const projectData = [
   {
     name: "BizNiche",
-    image: "https://i.postimg.cc/KjHc9fH9/Biz-Niche-SS.png",
+    image: "https://i.ibb.co/6rZgFbD/Biz-Niche-SS.png",
     description:
       "An e-commerce platform empowering local businesses with AI-powered product recommendations and category detection.",
   },
   {
     name: "Course Session Plan",
-    image: "https://i.postimg.cc/Fz7NJcH0/Session-Plan-Management.png",
+    image: "https://i.ibb.co/M2HV98Z/Session-Plan-Management.png",
     description:
       "A tool for instructors to create, manage, and share detailed course session plans effectively.",
   },
   {
     name: "Career GPT",
-    image: "https://i.postimg.cc/WpH2c958/Gemini-Project.png",
+    image: "https://i.ibb.co/KxQWHm2/Gemini-Project.png",
     description:
       "An AI-driven platform offering personalized career guidance based on user profiles and preferences.",
   },
