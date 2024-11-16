@@ -34,15 +34,15 @@ const Projects = () => {
             className="flex flex-col lg:flex-row items-center rounded-xl shadow-lg p-10 bg-transparent hover:shadow-2xl transition duration-300  hover:bg-gray-700"
           >
             {/* Project Image */}
-            <div className="w-full lg:w-2/5 flex items-center justify-center mb-6 lg:mb-0  bg-transparent">
+            <div className="w-full flex items-center justify-center mb-6 lg:mb-0  bg-transparent">
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-72 h-72 object-contain rounded-lg bg-transparent"
+                className="w-300 h-400 object-contain rounded-lg bg-transparent"
               />
             </div>
             {/* Project Details */}
-            <div className="w-full lg:w-3/5 text-center lg:text-left space-y-6 bg-transparent">
+            <div className="w-full lg:w-3/5 text-center lg:text-left space-y-6 bg-transparent pl-10">
               <h2 className="text-4xl font-bold bg-transparent">
                 {project.name}
               </h2>

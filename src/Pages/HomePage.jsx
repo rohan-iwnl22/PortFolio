@@ -1,6 +1,7 @@
 import React from "react";
 import TechStack from "./TechStack";
 import Projects from "./Projects";
+import Profiles from "./Profiles";
 
 const HomePage = () => {
   return (
@@ -72,6 +73,7 @@ const HomePage = () => {
       <div className="flex-1 h-full overflow-y-auto bg-black p-6">
         <TechStack />
         <Projects></Projects>
+        <Profiles />
       </div>
     </div>
   );
