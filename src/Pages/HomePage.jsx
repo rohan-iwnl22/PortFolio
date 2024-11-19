@@ -73,6 +73,14 @@ const HomePage = () => {
               >
                 Github
               </a>
+              <br />
+              <a
+                href="public\rohan_resume (1).pdf"
+                download="Rohan_Resumt.pdf"
+                className="text-white underline"
+              >
+                Resume 🎓
+              </a>
             </div>
             <p className="font-bold text-xl sm:text-2xl mt-4">
               Third Year Undergrad at SIES - Graduate School of Technology.
