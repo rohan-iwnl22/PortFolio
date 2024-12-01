@@ -75,8 +75,8 @@ const HomePage = () => {
               </a>
               <br />
               <a
-                href="public\rohan_resume (1).pdf"
-                download="Rohan_Resumt.pdf"
+                href="public\RohanResume.pdf"
+                download="Rohan_Resume.pdf"
                 className="text-white underline"
               >
                 Resume 🎓
