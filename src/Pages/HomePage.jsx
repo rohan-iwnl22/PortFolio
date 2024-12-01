@@ -75,7 +75,7 @@ const HomePage = () => {
               </a>
               <br />
               <a
-                href="public/RohanResume.pdf"
+                href="/RohanResume.pdf"
                 download="Rohan_Resume.pdf"
                 className="text-white underline"
               >
